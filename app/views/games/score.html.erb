@@ -1,0 +1,16 @@
+<h1>LongestWord</h1>
+<p>a ver si sale la respuesta</p>
+
+<!-- <p> Sorry, but: <strong><%=params[:respuesta]%></strong> cant be built of <%=@mix%></p>-->
+
+<% if @included %>
+  <% if @estado %>
+      <p> Congratulations!!😁: <strong><%= params[:respuesta] %></strong> tiene una longitud de <%= @buscar["length"] %></p>
+  <% elsif %>
+      <p> Sorry 😣!!: <strong><%= params[:respuesta] %></strong> No existe en ingles></p>
+  <% end %>
+
+<% else %>
+  <p> Sorry 😒, but: <strong><%= params[:respuesta] %></strong> cant be built of <%= @mix %></p>
+<% end %>
+

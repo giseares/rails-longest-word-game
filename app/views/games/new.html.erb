@@ -1,0 +1,23 @@
+<h1>Welcome to the longest word-game!</h1>
+<p>-------------------------------------</p>
+
+<!-- view new -->
+<!-- # 1. el usuario debe poder visualizar las letras (grid) -->
+<p> Create the longest word:  <%= @mix%> </p>
+
+<!--# 2. ingresar la palabra que el esta creando (form)  -->
+<form action="/score" method="post">
+  <%= hidden_field_tag :authenticity_token, form_authenticity_token%>
+  <input type="text" name="respuesta" value="<%= params[:respuesta] %>" placeholder="Ingrese su palabra:">
+  <input type="submit">
+</form>
+
+
+<!--# 6. hay que tomar el tiempo dsde que se envio el form y restarlo del momento en que se cargo la pagina ask. -->
+<!--# 7. Si la palabra no existe el score = 0 -->
+<!--# 8. Si la palabra existe hay que ponerle un score a definir como te guste mas -->
+<!--# 9. SI hay forma de validar que se la palabra mas larga -->
+
+<!--# view score -->
+<!--# 5. hay que mostrar la palabra en ASK -->
+<!--# 10. Mostar el score -->
